@@ -29,6 +29,9 @@ Thanks for the help of @[ChaiHuanhuan](https://github.com/ChaiHuanhuan), who tra
 
 -> if you wan to remove text/numbers in the image run ```python submission.py```
 
+-> the model results are stored in './results_2/'
+
+
 ## write-up
 -> The solution is the implementation of the paper WDNet
 

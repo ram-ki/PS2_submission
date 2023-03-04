@@ -22,11 +22,15 @@ Thanks for the help of @[ChaiHuanhuan](https://github.com/ChaiHuanhuan), who tra
 
 ## Steps to run the code
 -> Download the pre-trained models and paste in './Pretrained_WDNet/'
+
 -> run ```python test.py```
+
 -> the model results are stored in './results/'
+
 -> if you wan to remove text/numbers in the image run ```python submission.py```
 
 ## write-up
 -> The solution is the implementation of the paper WDNet
+
 -> The WDNet uses a sequence of generator and discriminator for watermark-removal
 

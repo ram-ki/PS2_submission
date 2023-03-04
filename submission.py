@@ -27,11 +27,7 @@ G=generator(3,3)
 G.eval()
 G.load_state_dict(torch.load(os.path.join('./Pretrained_WDNet/WDNet_G.pkl'), map_location=torch.device('cpu')))
 # G.cuda()
-root = 'C:/Users/Ramakrishnan/Videos/PS2/PS2_sample_images/'
-root = 'C:/Users/Ramakrishnan/Videos/PS2/PS2_sample_images/'
-imageJ_path=osp.join(root,'PS2_sample_image_','%s.jpg')
-img_save_path=osp.join('./results','result_img','%s.jpg')
-img_vision_path=osp.join('./results','result_vision','%s.jpg')
+root = './test_images/'
 ids = list()
 for file in os.listdir(root):
   #if(file[:-4]=='.jpg'):
@@ -121,7 +117,7 @@ def inpaint_text(img_path, pipeline):
 pipeline = keras_ocr.pipeline.Pipeline()
 
 ids = list()
-results_path = "C:/Users/Ramakrishnan/Videos/PS2/WDNet/results/"
+results_path = "./results/"
 for file in os.listdir(results_path):
   ids.append(results_path+file)
 
@@ -132,5 +128,5 @@ for img in ids:
 
     plt.imshow(img_text_removed)
 
-    cv2.imwrite('C:/Users/Ramakrishnan/Videos/PS2/WDNet/results_2/'+str(i)+".jpg", cv2.cvtColor(img_text_removed, cv2.COLOR_BGR2RGB))
+    cv2.imwrite('./results_2/'+str(i)+".jpg", cv2.cvtColor(img_text_removed, cv2.COLOR_BGR2RGB))
     i+=1

@@ -14,11 +14,7 @@ G=generator(3,3)
 G.eval()
 G.load_state_dict(torch.load(os.path.join('./Pretrained_WDNet/WDNet_G.pkl'), map_location=torch.device('cpu')))
 # G.cuda()
-root = 'C:/Users/Ramakrishnan/Videos/PS2/PS2_sample_images/'
-root = 'C:/Users/Ramakrishnan/Videos/PS2/PS2_sample_images/'
-imageJ_path=osp.join(root,'PS2_sample_image_','%s.jpg')
-img_save_path=osp.join('./results','result_img','%s.jpg')
-img_vision_path=osp.join('./results','result_vision','%s.jpg')
+root = './test_images/'
 ids = list()
 for file in os.listdir(root):
   #if(file[:-4]=='.jpg'):
@@ -47,7 +43,7 @@ for img_id in ids:
   p0=torch.cat([p0,p2],2)
   p0=transforms.ToPILImage()(p0.detach().cpu()).convert('RGB')
   pred_target=transforms.ToPILImage()(p1.detach().cpu()).convert('RGB')
-  pred_target.save('C:/Users/Ramakrishnan/Videos/PS2/WDNet/results/'+str(i)+'.jpg')
+  pred_target.save('./results/'+str(i)+'.jpg')
   # if i<=20:
   #   p0.save('C:/Users/Ramakrishnan/Videos/PS2/WDNet/results/_'+str(i)+'_.jpg')
   

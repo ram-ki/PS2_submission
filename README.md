@@ -1,5 +1,28 @@
-# WatermarkRemoval-WDNet-WACV2021
-Thank you for your attention.
+
+## Our approach
+-> We implemented the Deep-learning based Watermark-Decomposition Network for Visible Watermark Removal paper for PS2
+
+-> The DL model is trained on the CLWD dataset, which has pairs of images with and without watermark
+
+-> The DL model aims at detecting, removing and inpainting the watermark with refined features
+
+## Steps to run the code
+-> Download the pre-trained models and paste in './Pretrained_WDNet/'
+
+-> run ```python test.py```
+
+-> the model results are stored in './results/'
+
+-> if you wan to remove text/numbers in the image run ```python submission.py```
+
+-> the model results are stored in './results_2/'
+
+
+## write-up
+-> The solution is the implementation of the paper WDNet
+
+-> The WDNet uses a sequence of generator and discriminator for watermark-removal
+
 ## Citation
 Please cite the related works in your publications if it helps your research:
 ```
@@ -19,21 +42,4 @@ year = {2021}
 
 ## Pretraied Model
 Thanks for the help of @[ChaiHuanhuan](https://github.com/ChaiHuanhuan), who trained the WDNet and provided a pretrained [WDNet model](https://drive.google.com/drive/folders/1UYOtWmYZQQmCPMLVrstVxhPYW4Jngo-g?usp=sharing). This model is trained for 50 epoches.
-
-## Steps to run the code
--> Download the pre-trained models and paste in './Pretrained_WDNet/'
-
--> run ```python test.py```
-
--> the model results are stored in './results/'
-
--> if you wan to remove text/numbers in the image run ```python submission.py```
-
--> the model results are stored in './results_2/'
-
-
-## write-up
--> The solution is the implementation of the paper WDNet
-
--> The WDNet uses a sequence of generator and discriminator for watermark-removal
 

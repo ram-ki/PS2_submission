@@ -6,6 +6,10 @@
 
 -> The DL model aims at detecting, removing and inpainting the watermark with refined features
 
+-> We use the pre-trained os the WDNet to assist our watermark-removal tool 
+
+-> The reason to use WDNet was its ability to generalise to different types and colors of watermark logos without the need to look at mask at inferernce
+
 ## Steps to run the code
 -> Download the pre-trained models and paste in './Pretrained_WDNet/'
 
